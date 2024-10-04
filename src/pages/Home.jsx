@@ -1,8 +1,15 @@
-import React from 'react'
+import React,{useState}  from 'react'
+import Data from "../helper/Data"
+import TodoShow from '../components/TodoShow';
 
 const Home = () => {
+
+    const [doing,setDoing]=useState(Data);
+
   return (
-    <div>Home</div>
+    <div>
+        <TodoShow doing={doing} setDoing={setDoing} />
+    </div>
   )
 }
 
