@@ -7,7 +7,7 @@ const TodoShow = ({ doing, setDoing }) => {
     return (
         <div>
             {doing.map((x) => (
-                <div>
+                <div className={x.isDone ? "done" : "gorev"} >
                     <h3>
                         {x.text}
                         <div>
