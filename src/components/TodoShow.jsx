@@ -4,15 +4,22 @@ import { FaCheckCircle } from "react-icons/fa";
 
 const TodoShow = ({ doing, setDoing }) => {
     // console.log(doing);
+
+    const deleteTodo=(id)=>{
+        setDoing(doing.filter((a)=>a.id!==id))
+    }
+
     return (
         <div>
             {doing.map((x) => (
-                <div className={x.isDone ? "done" : "gorev"} >
+                <div className={x.isDone ? "griTrue" : "sariFalse"} >
                     <h3>
                         {x.text}
                         <div>
-                            <FaCheckCircle style={{color:"red", fontSize:"20px"}} />
-                            <MdDeleteForever style={{color:"red", fontSize:"25px"}} />
+                            <FaCheckCircle onClick={()=>setDoing(
+                                doing.map((a)=>a.id===x.id ? {...a, isDone : !a.isDone} : a)
+                            )} style={{color:"green", fontSize:"20px"}} />
+                            <MdDeleteForever onClick={()=>deleteTodo(x.id)} style={{color:"red", fontSize:"25px"}} />
                         </div>
                     </h3>
                     <h6>{x.day}</h6>

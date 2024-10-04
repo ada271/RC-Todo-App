@@ -87,18 +87,3 @@ header {
   margin: 2rem 0;
 }
 
-.gorev {
-    background: #f4f4f4;
-    background: rgb(193, 193, 61);
-    margin: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  
-  .done {
-    border-left: 10px solid rgb(102, 18, 77);
-    text-decoration: line-through;
-    background-color: darkgrey;
-    padding: 10px 20px;
-  
-  }
