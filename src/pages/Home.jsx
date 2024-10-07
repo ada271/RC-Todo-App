@@ -1,6 +1,7 @@
 import React,{useState}  from 'react'
 import Data from "../helper/Data"
 import TodoShow from '../components/TodoShow';
+import TodoAdd from '../components/TodoAdd';
 
 const Home = () => {
 
@@ -8,6 +9,7 @@ const Home = () => {
 
   return (
     <div>
+        <TodoAdd doing={doing} setDoing={setDoing}/>
         <TodoShow doing={doing} setDoing={setDoing} />
     </div>
   )
